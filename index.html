@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>貪吃蛇遊戲</title>
+  <style>
+    canvas { background: #000; display: block; margin: 20px auto; }
+    #userForm, #gameArea { text-align: center; }
+  </style>
+</head>
+<body>
+  <div id="userForm">
+    <h1>歡迎來玩貪吃蛇</h1>
+    <label for="username">請輸入你的名字：</label>
+    <input type="text" id="username" />
+    <button onclick="startGame()">開始遊戲</button>
+  </div>
+
+  <div id="gameArea" style="display:none;">
+    <h2 id="greeting"></h2>
+    <canvas id="game" width="400" height="400"></canvas>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
