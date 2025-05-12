@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>貪吃蛇遊戲</title>
-  <style>
-    canvas { background: #000; display: block; margin: 20px auto; }
-    #userForm, #gameArea { text-align: center; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="userForm">
     <h1>歡迎來玩貪吃蛇</h1>
     <label for="username">請輸入你的名字：</label>
-    <input type="text" id="username" />
-    <button onclick="startGame()">開始遊戲</button>
+    <input type="text" id="username" placeholder="玩家名稱" />
+    <button onclick="initGame()">開始遊戲</button>
   </div>
 
   <div id="gameArea" style="display:none;">
-    <h2 id="greeting"></h2>
-    <canvas id="game" width="400" height="400"></canvas>
+    <div id="gameInfo">
+        <span id="greeting">玩家：</span>
+        <span id="scoreDisplay">分數：<span id="score">0</span></span>
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="gameOverScreen" style="display: none;">
+        <h2>遊戲結束！</h2>
+        <p>你的最終分數是：<span id="finalScore">0</span></p>
+        <p>按 Enter 鍵重新開始</p>
+    </div>
   </div>
 
   <script src="game.js"></script>
